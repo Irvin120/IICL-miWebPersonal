@@ -1,0 +1,30 @@
+{% comment %} <!DOCTYPE html> {% endcomment %}
+{% comment %} Este documento HTML es sera la base de los documentos que extiendan de el 
+toda la estructura sera heredada a sus hijas. {% endcomment %}
+{% comment %} <html lang="es"> {% endcomment %}
+  {% comment %} <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title> {% block title %} {% endblock %} | Mi Web Personal</title>
+    
+  </head> {% endcomment %}
+  {% comment %} <body> {% endcomment %}
+    {% comment %} <h1>Mi Web Personal</h1> {% endcomment %}
+    {% comment %} <ul> {% endcomment %}
+      {% comment %} Este tag nos permite hacer referencia directamente a una view desde nuestros 
+      templates y es la forma correcta de escribir enlaces relativos dentro de nuestra web. {% endcomment %}
+      {% comment %} <li><a href="{% url 'home' %}">Portada</a></li>
+      <li><a href="{% url 'about'%}">Acerca de</a></li>
+      <li><a href="{% url 'portfolio'%}">Portfolio</a></li>
+      <li><a href="{% url 'contact' %}">Contacto</a></li> {% endcomment %}
+    {% comment %} </ul> {% endcomment %}
+    
+{% comment %} Los bloques de contenido nos ayudan a definir un espacio 
+de contenido el cual puede ser variable dependiendo de la vista a la que se llame {% endcomment %}
+    {% comment %} {% block content %}
+    {% endblock %}  {% endcomment %}
+
+  {% comment %} </body> {% endcomment %}
+{% comment %} </html> {% endcomment %}
