@@ -1,16 +1,22 @@
 {% extends 'core/base.html' %}
 {% comment %} Indicamos la de donde extiende este documento {% endcomment %}
 
+{% load static %}
+
 {% block title%} Contacto {% endblock%}
 
+{% block background %}{% static 'core/img/contac.jpg' %}{% endblock %}
 
-{% comment %} Hacemos referencia al tipo de bloque de contenido al que sera asignado mi contenido {% endcomment %}
-{% block content %}
-<h1>Contacto </h1>
+{% block headers %}<h1>Contacto </h1>
 <p> Aqui dejo mis redes sociales para quien guste contactarme</p>
     <ul>
         <li><a href="/">Email</a></li>
         <li><a href="/about/"> Github </a></li>
         <li><a href="/about/"> Youtube </a></li>
      </ul>
+{% endblock %}
+
+{% comment %} Hacemos referencia al tipo de bloque de contenido al que sera asignado mi contenido {% endcomment %}
+{% block content %}
+
 {% endblock %}
